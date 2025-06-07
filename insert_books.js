@@ -145,7 +145,10 @@ async function insertBooks() {
 
     // Get database and collection
     const db = client.db(dbName);
+    console.log(`${db} Database Created Successfully!`)
+
     const collection = db.collection(collectionName);
+    console.log(`${collection} Collection created Successfully!`)
 
     // Check if collection already has documents
     const count = await collection.countDocuments();
